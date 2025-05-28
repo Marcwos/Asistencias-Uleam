@@ -21,23 +21,23 @@ estudiantes.forEach((nombre, index) => {
   fila.innerHTML = `
     <td>${index + 1}</td>
     <td class="col-nombre">${nombre}</td>
-    <td><input type="checkbox" class="presente" data-index="${index}"></td>
-    <td><input type="checkbox" class="falto" data-index="${index}"></td>
+    <td><input type="checkbox" class="falta" data-index="${index}"></td>
+    <td><input type="checkbox" class="atrasado" data-index="${index}"></td>
   `;
 
   cuerpoTabla.appendChild(fila);
 });
 
 document.addEventListener("change", (e) => {
-  if (e.target.classList.contains("presente") || e.target.classList.contains("falto")) {
+  if (e.target.classList.contains("falta") || e.target.classList.contains("atrasado")) {
     const index = e.target.dataset.index;
-    const presente = document.querySelector(`.presente[data-index="${index}"]`);
-    const falto = document.querySelector(`.falto[data-index="${index}"]`);
+    const falta = document.querySelector(`.falta[data-index="${index}"]`);
+    const atrasado = document.querySelector(`.atrasado[data-index="${index}"]`);
 
-    if (e.target === presente && presente.checked) {
-      falto.checked = false;
-    } else if (e.target === falto && falto.checked) {
-      presente.checked = false;
+    if (e.target === falta && falta.checked) {
+      atrasado.checked = false;
+    } else if (e.target === atrasado && atrasado.checked) {
+      falta.checked = false;
     }
   }
 });
