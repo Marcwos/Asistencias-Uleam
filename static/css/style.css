@@ -161,3 +161,84 @@ th, td {
   outline: 2px solid black;
   transform: scale(1.05);
 }
+
+/* Materias*/
+
+/* Contenedor principal */
+.contenedor-materias {
+  padding: 20px 40px;
+  height: calc(100vh - 70px); /* Altura visible menos el header */
+  overflow-y: auto;
+  background-color: #f9f9f9;
+}
+
+/* Título */
+.titulo-seccion {
+  color: #c21807;
+  margin-bottom: 20px;
+}
+
+/* Barra de búsqueda y ordenamiento */
+.filtros {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filtros input,
+.filtros select {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Materias en grid */
+.grid-materias {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Tarjeta de materia */
+.materia-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+}
+
+.materia-card:hover {
+  transform: scale(1.02);
+}
+
+.materia-header {
+  background-color: #7a7d82;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.materia-cursos {
+  padding: 10px;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Contenedor centrado del contenido principal */
+.bloque-materias {
+  background-color: white;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  max-width: 1000px;
+  margin: 0 auto; /* CENTRA horizontalmente */
+  height: 75vh;
+  overflow-y: auto;
+}
+
+/* Ya los estilos .filtros y .grid-materias están definidos */
