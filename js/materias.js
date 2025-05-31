@@ -1,19 +1,33 @@
 const materias = [
   {
     nombre: "Modelado orientado a objetos / Software",
-    cursos: ["Curso 3ro Software A", "Curso 3ro Software B"]
+    color: "#4e73df",
+    cursos: [
+      { id: "m1-0", nombre: "Curso 3ro Software A" },
+      { id: "m1-1", nombre: "Curso 3ro Software B" }
+    ]
   },
   {
     nombre: "Ingeniería de requisitos / Software",
-    cursos: ["Curso 2ro Software A", "Curso 2ro Software B"]
+    color: "#4e73df",
+    cursos: [
+      { id: "m2-0", nombre: "Curso 2ro Software A" },
+      { id: "m2-1", nombre: "Curso 2ro Software B" }
+    ]
   },
   {
     nombre: "Álgebra Lineal / Software",
-    cursos: ["Curso 1ro Software A"]
+    color: "#4e73df",
+    cursos: [
+      { id: "m3-0", nombre: "Curso 1ro Software A" }
+    ]
   },
   {
     nombre: "Programación Básica / Software – Nivelación",
-    cursos: ["Nivelación Software A"]
+    color: "#4e73df",
+    cursos: [
+      { id: "m4-0", nombre: "Nivelación Software A" }
+    ]
   }
 ];
 
@@ -25,21 +39,37 @@ function renderMaterias(lista) {
     const card = document.createElement("div");
     card.classList.add("materia-card");
 
+    const cursosHTML = materia.cursos
+      .map((curso) => `
+        <button class="btn-curso" data-id="${curso.id}">
+          ${curso.nombre}
+        </button>
+      `)
+      .join("");
+
     card.innerHTML = `
-      <div class="materia-header">${materia.nombre}</div>
+      <div class="materia-header" style="background-color: ${materia.color}">
+        ${materia.nombre}
+      </div>
+
       <div class="materia-cursos">
-        ${materia.cursos.map(curso => `<div>${curso}</div>`).join("")}
+        ${cursosHTML}
       </div>
     `;
 
-    card.onclick = () => {
-      // En una app real pasarías el ID o usarías localStorage
-      window.location.href = "detalle_materia.html";
-    };
-
     contenedor.appendChild(card);
   });
+
+  document.querySelectorAll(".btn-curso").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      const cursoId = e.target.dataset.id;
+      localStorage.setItem("cursoSeleccionado", cursoId);
+      window.location.href = "detalle_materia.html";
+    });
+  });
 }
+
+
 
 // Inicial
 renderMaterias(materias);

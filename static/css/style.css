@@ -176,6 +176,7 @@ th, td {
 .titulo-seccion {
   color: #c21807;
   margin-bottom: 20px;
+  text-align: left;
 }
 
 /* Barra de búsqueda y ordenamiento */
@@ -241,4 +242,21 @@ th, td {
   overflow-y: auto;
 }
 
-/* Ya los estilos .filtros y .grid-materias están definidos */
+.btn-curso {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  padding: 10px;
+  background-color: #e1e1e1;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: left;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.btn-curso:hover {
+  background-color: #d5d5d5;
+}
+
