@@ -1,11 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - ULEAM</title>
+  <link rel="stylesheet" href="static/css/style.css" />
 </head>
 <body>
-  
+  <!-- Encabezado -->
+  <header class="encabezado">
+    <div class="logo-uleam">
+      <span class="nombre-uleam">Uleam</span>
+    </div>
+    <div class="acceder">
+      <a href="#">Acceder</a>
+    </div>
+  </header>
+
+  <!-- Contenedor principal -->
+  <main class="login-container">
+    <div class="login-box">
+      <!-- Logo de ULEAM (temporalmente texto) -->
+      <h1 class="uleam-logo">Uleam</h1>
+      <p class="uleam-sub">UNIVERSIDAD LAICA<br/>ELOY ALFARO DE MANABÍ</p>
+
+      <!-- Formulario -->
+      <form onsubmit="login(); return false;">
+        <input type="text" id="usuario" placeholder="Nombre usuario" required />
+        <input type="password" id="clave" placeholder="Contraseña" required />
+        <button type="submit">Ingresar</button><br>
+        <a href="#" class="olvide">¿Olvidó contraseña?</a>
+      </form>
+    </div>
+  </main>
+
+  <script src="js/login.js"></script>
 </body>
 </html>

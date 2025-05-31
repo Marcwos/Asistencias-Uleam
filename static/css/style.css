@@ -1,8 +1,23 @@
-body {
-  font-family: Arial, sans-serif;
+/* ------------------ RESET Y BASE ------------------ */
+* {
   margin: 0;
-  padding: 20px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: Arial, sans-serif;
   background-color: #f4f4f4;
+  width: 100%;
+}
+
+/* ------------------ CLASES GENERALES ------------------ */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
@@ -10,14 +25,98 @@ h1 {
   color: #87d154;
 }
 
-.container {
-  max-width: 1200px;
-  margin: auto;
-  background-color: white;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+button, .btn {
+  background-color: #c21807;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 6px;
+  font-size: 14px;
 }
 
+input[type="text"], input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* ------------------ ENCABEZADO ------------------ */
+.encabezado {
+  width: 100%;
+  background-color: #7a7d82;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  color: white;
+}
+
+.logo-uleam {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nombre-uleam {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.acceder a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* ------------------ LOGIN ------------------ */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 60px);
+}
+
+.login-box {
+  background-color: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-box form {
+  text-align: left;
+}
+
+.uleam-logo {
+  color: #c21807;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.uleam-sub {
+  font-size: 14px;
+  margin-bottom: 20px;
+  line-height: 1.4;
+  color: #555;
+}
+
+.olvide {
+  
+  font-size: 12px;
+  color: #666;
+  text-decoration: none;
+}
+
+/* ------------------ TABLA DE ASISTENCIA ------------------ */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -33,15 +132,6 @@ th, td {
   padding: 12px;
   border: 1px solid #ddd;
   text-align: center;
-}
-
-button {
-  background-color: #c21807;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
 }
 
 .col-nombre {
