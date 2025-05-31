@@ -66,3 +66,9 @@ document.getElementById("ordenar").addEventListener("change", e => {
 
   renderMaterias(ordenadas);
 });
+
+const usuario = localStorage.getItem("usuarioLogueado");
+if (!usuario) {
+  window.location.href = "index.html"; // Redirige si no hay sesión
+}
+
