@@ -2,21 +2,32 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Detalle de Curso</title>
-  <link rel="stylesheet" href="static/css/style.css" />
+  <title>Detalle del Curso - ULEAM</title>
+  <link rel="stylesheet" href="static/css/detalle.css" />
+  <link rel="stylesheet" href="static/css/materias.css" />
+  
 </head>
 <body>
   <div id="header-placeholder"></div>
 
-  <main class="container">
-    <h2 id="nombre-curso"></h2>
-    <p><strong>Materia:</strong> <span id="materia"></span></p>
-    <p><strong>Horario:</strong> <span id="horario"></span></p>
-    <p><strong>Aula:</strong> <span id="aula"></span></p>
+  <main class="contenedor-materias">
+    <div class="bloque-materias">
+      <div class="fecha-actual" id="fecha-actual"></div>
+      <h2 class="titulo-seccion" id="materia">Materia</h2>
+
+      <div class="detalle-curso">
+        <h3 id="nombre-curso"></h3>
+        <p><strong>Horarios:</strong></p>
+        <p id="horario"></p>
+        <p><strong>Aula:</strong> <span id="aula"></span></p>
+
+        <a href="asistencia.html" class="btn">Asistencia</a>
+      </div>
+    </div>
   </main>
 
-  <script src="js/headerLoader.js"></script>
   <script src="data/cursos.js"></script>
   <script src="js/detalle.js"></script>
+  <script src="js/headerLoader.js"></script>
 </body>
 </html>

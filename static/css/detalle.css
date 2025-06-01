@@ -1,0 +1,29 @@
+/* ------------------ VISTA DETALLE ------------------ */
+.detalle-curso {
+  background-color: #f9f9f9;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 20px 30px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  margin-top: 20px;
+}
+
+.detalle-curso h3 {
+  color: #2e7d32;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.detalle-curso p {
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.fecha-actual {
+  text-align: right;
+  font-weight: bold;
+  color: #333;
+  font-size: 14px;
+  margin-bottom: 10px;
+}

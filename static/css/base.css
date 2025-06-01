@@ -1,0 +1,45 @@
+/* ------------------ RESET Y BASE ------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  color: #87d154;
+}
+
+/* ------------------ BOTONES E INPUTS ------------------ */
+button, .btn {
+  background-color: #c21807;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 6px;
+  font-size: 14px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background-color: #a51406;
+}
+
+input[type="text"], input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
