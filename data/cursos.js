@@ -4,7 +4,7 @@ const cursosDB = [
     nombre: "Curso 3ro Software A",
     materia: "Modelado orientado a objetos",
     horario: "Lunes y miércoles 08:00 - 10:00",
-    aula: "Aula 102"
+    aula: "Aula 102",
   },
   {
     id: "m1-1",
