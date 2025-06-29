@@ -20,14 +20,18 @@
 <script setup>
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
-import { loginUsuario } from '../js/login.js'
 
 const usuario = ref('')
 const clave = ref('')
 const router = useRouter()
 
 function login() {
-  loginUsuario(usuario.value, clave.value, router)
+  if (usuario.value === 'admin' && clave.value === '1234') {
+    localStorage.setItem('usuarioLogueado', usuario.value)
+    router.push('/materia')
+  } else {
+    alert('Credenciales incorrectas')
+  }
 }
 </script>
 
